@@ -116,24 +116,3 @@ button:hover {
     text-align: center;
     margin-top: 20px;
 }
-
-
-/* File input styles
-input[type="file"] {
-    display: none;
-}
-
-.custom-file-upload {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.custom-file-upload:hover {
-    background-color: #0056b3;
-}*/
