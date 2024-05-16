@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird Song Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="container">
+    <h1 class="centered">Bird Song Classification</h1>
+
+    <p>This website utilizes an advanced model to accurately predict bird species based on their songs. 
+        The model is proficient in identifying species such as the <strong>American Robin</strong>, <strong>Bewick's Wren</strong>, 
+        <strong>Northern Cardinal</strong>, <strong>Northern Mockingbird</strong>, and the <strong>Song Sparrow</strong>. 
+        It was meticulously trained using a Convolutional Neural Network (CNN) on a comprehensive public dataset sourced from 
+        <a href="https://www.kaggle.com/datasets/vinayshanbhag/bird-song-data-set" target="_blank">https://www.kaggle.com/datasets/vinayshanbhag/bird-song-data-set</a>
+        and <a href="https://www.xeno-canto.org/" target="_blank">https://www.xeno-canto.org/</a>, ensuring robust and reliable predictions.</p>
+    <p class="instructions">Upload an audio file (in .wav format) and click the "Upload" button to classify the bird according to its song.
+        If the prediction does not have at least a confidence level of 85%, the class will not be determined.</p>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <label for="file">Choose an audio file:</label>
+        <input type="file" name="file" accept=".wav">
+        <!--input type="submit" value="Upload"-->
+        <button type="submit">Upload</button>
+    </form>
+
+    <h2 class="centered">Bird Catalogue</h2>
+    <div class="image-row">
+        <div class="image-col">
+            <a href="https://www.allaboutbirds.org/guide/American_Robin/photo-gallery" target="_blank">
+                <img src="{{ url_for('static', filename='images/american_robin.jpg') }}" alt="Bird 1">
+            </a>
+            <h3>American Robin</h3>
+            <p class="author">Author: 
+                <a href="https://www.allaboutbirds.org/guide/American_Robin/photo-gallery#" target="_blank">Alex Eberts</a>
+            </p>
+        </div>
+        <div class="image-col">
+            <a href="https://www.allaboutbirds.org/guide/Bewicks_Wren/photo-gallery" target="_blank">
+                <img src="{{ url_for('static', filename='images/bewicks_wren.jpg') }}" alt="Bird 2">
+            </a>
+            <h3>Bewick's Wren</h3>
+            <p class="author">Author:
+                <a href="https://www.allaboutbirds.org/guide/Bewicks_Wren/photo-gallery" target="_blank">Michael Stubblefield</a>
+            </p>
+        </div>
+        <div class="image-col">
+            <a href="https://www.allaboutbirds.org/guide/Northern_Cardinal/photo-gallery" target="_blank">
+                <img src="{{ url_for('static', filename='images/northern_cardinal.jpg') }}" alt="Bird 3">
+            </a>
+            <h3>Northern Cardinal</h3>
+            <p class="author">Author: 
+                <a href="https://www.allaboutbirds.org/guide/Northern_Cardinal/photo-gallery" target="_blank">Suzie McCann</a>
+            </p>
+        </div>
+        <div class="image-col">
+            <a href="https://www.allaboutbirds.org/guide/Northern_Mockingbird/photo-gallery" target="_blank">
+                <img src="{{ url_for('static', filename='images/northern_mockingbird.jpg') }}" alt="Bird 4">
+            </a>
+            <h3>Northern Mockingbird</h3>
+            <p class="author">Author: 
+                <a href="https://www.allaboutbirds.org/guide/Northern_Mockingbird/photo-gallery" target="_blank">Jay McGowan</a>
+            </p>
+        </div>
+        <div class="image-col">
+            <a href="https://www.allaboutbirds.org/guide/Song_Sparrow/photo-gallery" target="_blank">
+                <img src="{{ url_for('static', filename='images/song_sparrow.jpg') }}" alt="Bird 5">
+            </a>
+            <h3>Song Sparrow</h3>
+            <p class="author">Author: 
+                <a href="https://www.allaboutbirds.org/guide/Song_Sparrow/photo-gallery" target="_blank">Jonathan Irons</a>
+            </p>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Santiago Miro</p>
+    </footer>
+</body>
+</html>
