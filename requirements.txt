@@ -3,3 +3,4 @@ Werkzeug==2.0.1
 numpy
 Keras==2.6.0
 librosa
+gunicorn==20.1.0
